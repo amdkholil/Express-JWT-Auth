@@ -1,0 +1,28 @@
+#baseUrl
+@baseUrl = http://localhost:3000
+
+###
+# login
+POST {{baseUrl}}/login
+Content-Type: application/json
+
+{
+    "email":"admin@mail.com",
+    "password":"abc"
+}
+
+###
+# refresh token
+GET {{baseUrl}}/refresh-token
+
+###
+#get users
+GET {{baseUrl}}/user
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJpYXQiOjE2Nzg5Njg0NjYsImV4cCI6MTY3ODk2ODc2Nn0.XeM7pWxnUffbY_6ndJiNQxZb_F5lkFN-uYt_fZbyfyo
+
+
+###
+# logout
+DELETE {{baseUrl}}/logout
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJpYXQiOjE2Nzg5NjI4NzIsImV4cCI6MTY3ODk2MzE3Mn0.8TVgpq5kSEQQ8jhqCAVnPJclq-vby6_bRTrs6i6Q2ig
