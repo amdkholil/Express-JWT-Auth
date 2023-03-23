@@ -25,6 +25,8 @@ class UserModel {
             hashed = hashed.replace("$2y$", "$2a$");
             cek = await bcrypt.compare(plaintText, hashed);
         }
+
+        return cek
     }
 }
 
